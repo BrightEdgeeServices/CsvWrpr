@@ -1,3 +1,8 @@
+[1.14.3]
+Title = "Version 1.14.3"
+Description = [ "Apply PackageIt.",]
+GitHubIssues = []
+
 [1.14.2]
 Title = "Version 1.14.2"
 Description = [ "Version 0.0.0", "Creation of the project", "List all the changes to the project here.", "Changes listed here will be in the release notes under the above heading.",]
