@@ -1,6 +1,6 @@
-Project Short Description (default ini)
+Wrapper for csv files
 
-    Project long description or extended summary goes in here (default ini)
+    Insert description here
 
 =======
 Testing

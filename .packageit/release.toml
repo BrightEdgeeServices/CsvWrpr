@@ -1,5 +1,10 @@
-[1.14.3]
-Title = "Version 1.14.3"
+[1.14.4]
+Title = "Version 1.14.4"
+Description = [ "Messed up the previous git merge.",]
+GitHubIssues = []
+
+[1.14.4]
+Title = "Version 1.14.4"
 Description = [ "Apply PackageIt.",]
 GitHubIssues = []
 
