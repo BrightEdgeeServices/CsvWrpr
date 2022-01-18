@@ -1,4 +1,4 @@
-'''Inset headline here
+'''Wrapper for csv files
 
 Insert description here
 '''
