@@ -5,9 +5,9 @@
 # packageit\pimp.ini and
 # D:\Dropbox\Projects\CsvWrpr\.packageit\packageit.ini
 #===================================================================
-beetools
-configparserext
-releaselogit
-semverit
-termcolor
 toml
+
+beetools
+displayfx
+configparserext
+termcolor

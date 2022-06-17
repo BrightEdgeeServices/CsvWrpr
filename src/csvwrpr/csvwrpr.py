@@ -9,7 +9,6 @@ from pathlib import Path
 import displayfx
 import beetools
 
-_VERSION = '1.14.0'
 _path = Path(sys.argv[0])
 _name = _path.stem
 
@@ -117,7 +116,6 @@ class CsvWrpr:
         self.logger_name = '{}.{}'.format(p_parent_logger_name, _name)
         self.logger = logging.getLogger(self.logger_name)
         self.logger.info('Start')
-        self.version = _VERSION
         self.success = False
         self.bar_len = p_bar_len
         self.msg_width = p_msg_width
@@ -465,7 +463,7 @@ class CsvWrpr:
                 if self.struc_type == [] or self.struc_type == ():
                     del self.csv_db[0]
                 elif self.struc_type == {}:
-                    del self.csv_db[self.key1]
+                    del self.csv_db[self.del_head]
             pass
 
         # end del_header
