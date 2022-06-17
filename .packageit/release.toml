@@ -1,3 +1,8 @@
+[1.15.3]
+Title = "Version 1.15.3"
+Description = [ "Rread_one_key_csv.del_header crash if key does not exist.", "Not properly tested",]
+GitHubIssues = [3]
+
 [1.15.2]
 Title = "Version 1.15.2"
 Description = [ "Rread_one_key_csv.del_header crash if key does not exist.",]

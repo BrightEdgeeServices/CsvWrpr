@@ -463,7 +463,7 @@ class CsvWrpr:
                 if self.struc_type == [] or self.struc_type == ():
                     del self.csv_db[0]
                 elif self.struc_type == {}:
-                    if self.del_head in self.csv_db.values():
+                    if self.del_head in self.csv_db.keys():
                         del self.csv_db[self.del_head]
             pass
 
