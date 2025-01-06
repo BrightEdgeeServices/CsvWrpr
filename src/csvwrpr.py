@@ -1,8 +1,3 @@
-"""Wrapper for csv files
-
-Insert description here
-"""
-
 import os
 import sys
 from pathlib import Path
@@ -154,8 +149,6 @@ class CsvWrpr:
             self.csv_db = []
             self.read_two_key_csv()
 
-    # end __init__
-
     def append(
         self,
         p_append_path,
@@ -244,8 +237,6 @@ class CsvWrpr:
             self.csv_db.update(csv_to_append.csv_db)
         self.nr_of_rows = len(self.csv_db)
 
-    # end append
-
     def export(self, p_export_file_name, p_export_delimiter="|"):
         """Export all of the current records."""
         if isinstance(self.csv_db, (list, tuple)):
@@ -259,8 +250,6 @@ class CsvWrpr:
             export_list = self.csv_db.keys()
             self.export_sub_set(p_export_file_name, export_list, p_export_delimiter)
         pass
-
-    # end export
 
     def export_sub_set(self, p_export_file_name, p_sub_set_list, p_export_delimiter="|"):
         """Description"""
@@ -303,8 +292,6 @@ class CsvWrpr:
         export_file.close()
         return export_qty
 
-    # end export_sub_set
-
     def read_csv_corr_str_file(self):
         """Parameters"""
         if self.csv_corr_str_file_name:
@@ -313,8 +300,6 @@ class CsvWrpr:
             corr_file.close()
             for row in raw_corr_data:
                 self.corr_str_list.append(row[:-1].split("~"))
-
-    # end read_csv_corr_str_file
 
     def read_one_key_csv(self):
         """Description"""
@@ -336,8 +321,6 @@ class CsvWrpr:
                 for corr in self.corr_str_list:
                     row = p_row.replace(corr[0], corr[1])
                 return row
-
-            # end replace_contents
 
             row = replace_contents(p_row)
             row = adjust_delimiters(row)
@@ -368,8 +351,6 @@ class CsvWrpr:
                 self.t_tow = ""
             return new_row
 
-        # end fix_row
-
         def get_delimiter():
             """Description"""
             if self.data_delimiter == "":
@@ -383,8 +364,6 @@ class CsvWrpr:
                 if not self.header_delimiter:
                     self.header_delimiter = self.data_delimiter
             pass
-
-        # end getDelimeter
 
         def append_row_to_list(p_row):
             """Append the corrected row to a list structure"""
@@ -400,8 +379,6 @@ class CsvWrpr:
             else:
                 self.csv_db.append(p_row)
             pass
-
-        # end append_row_to_list
 
         def append_row_to_db(p_row):
             """Append the corrected row to a db (tuple) structure"""
@@ -419,8 +396,6 @@ class CsvWrpr:
                 self.csv_db.append(csv_row)
             pass
 
-        # end append_row_to_db
-
         def append_row_to_dict(p_row):
             """Append the corrected row to a dictionary structure"""
             csv_row = {}
@@ -435,8 +410,6 @@ class CsvWrpr:
                 self.csv_db[csv_row[self.key1]] = csv_row
             pass
 
-        # end append_row_to_dict
-
         def del_header():
             """Delete the header according to parameter switch"""
             if self.del_head:
@@ -446,8 +419,6 @@ class CsvWrpr:
                     if self.del_head in self.csv_db.keys():
                         del self.csv_db[self.del_head]
             pass
-
-        # end del_header
 
         def replace_header():
             """Replace the header according to parameter switch"""
@@ -468,8 +439,6 @@ class CsvWrpr:
                 del raw_csv_file_data[0]
                 self.nr_of_rows -= 1
             pass
-
-        # end replace_header
 
         if os.path.isfile(self.csv_file_fame):
             csv_file = open(self.csv_file_fame, encoding="utf-8", errors="ignore")
@@ -527,8 +496,6 @@ class CsvWrpr:
                 print(log_str)
         return self.csv_db
 
-    # end read_one_key_csv
-
     def read_two_key_csv(self):
         """Description"""
         log_str = self.read_one_key_csv()
@@ -558,5 +525,3 @@ class CsvWrpr:
                     )
                     print(error_str)
             dfx.update(row_cntr)
-
-    # end read_two_key_csv
