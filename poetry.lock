@@ -57,6 +57,21 @@ docs = ["furo", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "sphinx (>=3.5
 testing = ["jaraco.test", "pytest (!=8.0.*)", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)"]
 
 [[package]]
+name = "beetools"
+version = "5.2.4"
+description = "Tools for batch scripts, virtual environments and utilities."
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "beetools-5.2.4-py3-none-any.whl", hash = "sha256:6d0e19a251c3527431e89d1022304f71e4a31b23576f7aa969bd1dbe87a56fe4"},
+    {file = "beetools-5.2.4.tar.gz", hash = "sha256:c7de2fc05563563aea9a3031cb02b271d71ef274f137c3c9803586b244e8a26a"},
+]
+
+[package.dependencies]
+termcolor = ">=2.5.0,<3.0.0"
+
+[[package]]
 name = "black"
 version = "25.1.0"
 description = "The uncompromising code formatter."
@@ -486,6 +501,21 @@ sdist = ["build (>=1.0.0)"]
 ssh = ["bcrypt (>=3.1.5)"]
 test = ["certifi (>=2024)", "cryptography-vectors (==44.0.1)", "pretend (>=0.7)", "pytest (>=7.4.0)", "pytest-benchmark (>=4.0)", "pytest-cov (>=2.10.1)", "pytest-xdist (>=3.5.0)"]
 test-randomorder = ["pytest-randomly"]
+
+[[package]]
+name = "displayfx"
+version = "2.1.1"
+description = "Display progress indicator on CRT screen."
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "displayfx-2.1.1-py3-none-any.whl", hash = "sha256:8fc3657583287e4cf7542fed27ca68cc9945c6c070276abec160632d6938815a"},
+    {file = "displayfx-2.1.1.tar.gz", hash = "sha256:d8a88f400771945f5e039704e4c6f3733b6040685a289034edc1c975d3f41991"},
+]
+
+[package.dependencies]
+beetools = ">=5.2.4,<6.0.0"
 
 [[package]]
 name = "distlib"
@@ -1866,6 +1896,21 @@ standalone = ["Sphinx (>=5)"]
 test = ["pytest"]
 
 [[package]]
+name = "termcolor"
+version = "2.5.0"
+description = "ANSI color formatting for output in terminal"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "termcolor-2.5.0-py3-none-any.whl", hash = "sha256:37b17b5fc1e604945c2642c872a3764b5d547a48009871aea3edd3afa180afb8"},
+    {file = "termcolor-2.5.0.tar.gz", hash = "sha256:998d8d27da6d48442e8e1f016119076b690d962507531df4890fcd2db2ef8a6f"},
+]
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
 name = "tomli"
 version = "2.2.1"
 description = "A lil' TOML parser"
@@ -2039,4 +2084,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10"
-content-hash = "18e97460e11c738c3a0bd4b7519a0297b9b20c6cf79fb855a755630db990ca66"
+content-hash = "b08bd4f8f4a1045a82fddcb09f9920be59e3edfc9076ad115bf787fa2247cd2a"
