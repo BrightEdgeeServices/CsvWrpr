@@ -9,6 +9,21 @@
 
 Wrapper for csv files.
 
+## Overview
+
+CsvWrpr is a versatile Python utility designed to simplify the process of reading and restructuring CSV data. It provides a convenient wrapper around standard CSV operations, allowing developers to easily convert CSV content into various Python data structures like lists, dictionaries, or tuples.
+
+Beyond simple conversion, CsvWrpr offers robust header manipulation capabilities, including adding, removing, or replacing headers on the fly. It is also equipped to handle different delimiters, filter data subsets, and clean up undesirable characters within the source file.
+
+### Key Features
+
+- **Flexible Data Structures**: Convert CSV data into Lists, Tuples (optimized for database imports), or Dictionaries (with support for nested dimensions).
+- **Header Management**: Easily delete existing headers, inject new ones, or replace them entirely during the wrapping process.
+- **Smart Delimiter Detection**: Automatically identify or explicitly define data and header delimiters.
+- **Data Sanitization**: Handle and correct undesirable characters or formatting inconsistencies within the CSV.
+- **Subset Selection**: Extract specific ranges or subsets of data from the original file.
+- **Progress Tracking**: Built-in support for progress bars and verbose messaging for large file processing.
+
 [cicd_codestyle_img]: https://img.shields.io/badge/code%20style-black-000000.svg "Black"
 [cicd_codestyle_lnk]: https://github.com/psf/black "Black"
 [cicd_pre_commit_img]: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/PoetryExample/pre-commit.yml?label=pre-commit "Pre-Commit"
