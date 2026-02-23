@@ -136,7 +136,7 @@ class CsvWrpr:
         self.tail = ""
         self.t_tow = ""
         self.read_csv_corr_str_file()
-        (self.head, self.tail) = os.path.split(self.csv_file_fame)
+        self.head, self.tail = os.path.split(self.csv_file_fame)
         if self.key2 == "":
             if self.struc_type == [] or self.struc_type == ():
                 self.csv_db = []
